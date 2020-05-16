@@ -64,13 +64,3 @@ buildNumber.properties
 .mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
-.gitignore
-.idea/$CACHE_FILE$
-.idea/.gitignore
-.idea/compiler.xml
-.idea/encodings.xml
-.idea/misc.xml
-.idea/uiDesigner.xml
-Clazz_4.iml
-pom.xml
-src/
