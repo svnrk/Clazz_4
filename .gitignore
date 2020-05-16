@@ -1,0 +1,76 @@
+# Created by .ignore support plugin (hsz.mobi)
+### fromWeb template
+# Compiled source #
+############
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.bat
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+############
+*.log
+
+# OS generated files #
+############
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Java and Gradle #
+############
+build/
+.gradle/
+out/
+out
+.gradle
+gradle
+gradlew.bat
+gradlew
+settings.gradle
+
+# IntelliJ #
+############
+.idea
+.idea/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+.mvn/wrapper/maven-wrapper.jar
+.gitignore
+.idea/$CACHE_FILE$
+.idea/.gitignore
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/uiDesigner.xml
+Clazz_4.iml
+pom.xml
+src/
