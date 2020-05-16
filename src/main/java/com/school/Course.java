@@ -1,10 +1,11 @@
-package com;
+package com.school;
+
 
 import com.Utils.*;
-
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
+
 
 
 public class Course {
@@ -24,6 +25,8 @@ public class Course {
         this.endDate = DateConverter.dateStringToZDT(endDate);
         this.timePeriod = new TimePeriod(this.startDate, this.endDate);
         this.teacher = teacher;
+
+
     }
 
     public void addStudent(Student student) {

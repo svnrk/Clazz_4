@@ -1,4 +1,4 @@
-package com;
+package com.school;
 
 public class Teacher extends PersonImpl {
     public Teacher(String firstName, String lastName) {

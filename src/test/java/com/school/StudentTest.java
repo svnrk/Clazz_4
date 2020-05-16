@@ -1,5 +1,8 @@
-package com;
+package com.school;
 
+import com.school.Course;
+import com.school.Student;
+import com.school.Teacher;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -21,7 +24,7 @@ public class StudentTest {
     String output1 = john.getFirstName();
     Assert.assertEquals("John", output1);
     Student.removeStudent(john);
-//    com.Student jack = new com.Student("Jack", "Cool", "12-12-1990");
+//    com.school.Student jack = new com.school.Student("Jack", "Cool", "12-12-1990");
     String output2 = jack.getFirstName();
     Assert.assertEquals("Jack", output2);
 }

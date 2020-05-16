@@ -1,6 +1,6 @@
 package com.Utils;
 
-import com.Service.PublicHolidayService;
+import com.Service.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -40,6 +40,12 @@ public class TimePeriodTest {
 
         long output4 = new TimePeriod(startDate, startDate).getPeriodLengthInDays();
         Assert.assertEquals(1, output4);
+    }
+
+    @Test (expected = NullPointerException.class)
+    public void getsNullPointerExeption() {
+        long output1 = new TimePeriod(null, null).getPeriodLengthInDays();
+
     }
 
     @Test

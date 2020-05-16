@@ -1,4 +1,4 @@
-package com;
+package com.school;
 
 
 import com.Utils.*;

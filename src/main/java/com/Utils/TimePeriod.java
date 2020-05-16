@@ -20,21 +20,24 @@ public class TimePeriod {
     }
 
     public TimePeriod(ZonedDateTime startDate_, ZonedDateTime endDate_) {
-        if (startDate_.isBefore(endDate_)) {
-            this.startDate = startDate_;
-            this.endDate = endDate_;
-        }
-        else if (endDate_.isBefore(startDate_)){
-            this.startDate = endDate_;
-            this.endDate = startDate_;
-        }
-        else {
-            this.startDate = startDate_;
-            this.endDate = startDate_;
-        }
+        try {
+            if (startDate_.isBefore(endDate_)) {
+                this.startDate = startDate_;
+                this.endDate = endDate_;
+            } else if (endDate_.isBefore(startDate_)) {
+                this.startDate = endDate_;
+                this.endDate = startDate_;
+            } else {
+                this.startDate = startDate_;
+                this.endDate = startDate_;
+            }
 
-        holidays = getListOfHolidaysInPeriod();
-        workDays = getListOfWorkDaysInPeriod();
+            holidays = getListOfHolidaysInPeriod();
+            workDays = getListOfWorkDaysInPeriod();
+        }
+        catch (NullPointerException e){
+            System.out.println("No date");
+        }
     }
 
     public Long getPeriodLengthInDays() {
