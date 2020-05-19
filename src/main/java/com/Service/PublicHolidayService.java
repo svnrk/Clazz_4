@@ -2,6 +2,7 @@ package com.Service;
 
 import com.Utils.*;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -44,16 +45,22 @@ public class PublicHolidayService {
 
                 for (Object obj : array) {
                     JSONObject object = (JSONObject) obj;
-                    String dateString = object.getString("date");
-                    ZonedDateTime holiday = DateConverter.dateStringToZDTSpecial(dateString, "yyyy-MM-dd");
+                    if (object.has("date")) {
+                        String dateString = object.getString("date");
+                        ZonedDateTime holiday = DateConverter.dateStringToZDTSpecial(dateString, "yyyy-MM-dd");
 
-                    holidays.add(holiday);
+                        holidays.add(holiday);
+                    }
+
                 }
             }
 
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+        catch (IOException | JSONException | NullPointerException e) {
+            e.printStackTrace();
+            return null;
+        }
+
         return holidays;
     }
 
