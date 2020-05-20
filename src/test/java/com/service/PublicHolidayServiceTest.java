@@ -1,11 +1,9 @@
-package com.Service;
+package com.service;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static org.junit.Assert.assertEquals;
 
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
-import org.json.JSONException;
-import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
-package com.Utils;
+package com.utils;
 
-import com.Service.*;
+import com.service.*;
 
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;

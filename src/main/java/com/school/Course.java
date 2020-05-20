@@ -1,7 +1,7 @@
 package com.school;
 
 
-import com.Utils.*;
+import com.utils.*;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;

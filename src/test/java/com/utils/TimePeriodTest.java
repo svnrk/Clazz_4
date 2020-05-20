@@ -1,6 +1,6 @@
-package com.Utils;
+package com.utils;
 
-import com.Service.*;
+import com.service.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,6 +26,18 @@ public class TimePeriodTest {
     TimePeriod timePeriod2 = new TimePeriod(Objects.requireNonNull(endDate), startDate);
     TimePeriod timePeriod3 = new TimePeriod(startDate, endDate2);
     TimePeriod timePeriod4 = new TimePeriod(startDate, endDate3);
+
+    @Mock
+    PublicHolidayService service = new PublicHolidayService();
+
+    @InjectMocks
+    TimePeriod timePeriod5 = new TimePeriod(startDate, endDate2);
+
+    @Before
+    public void init() {
+        MockitoAnnotations.initMocks(this);
+    }
+
 
     @Test
     public void getsPeriodLengthInDays(){
@@ -104,16 +116,6 @@ public class TimePeriodTest {
 
     }
 
-    @Mock
-    PublicHolidayService service = new PublicHolidayService();
-
-    @InjectMocks
-    TimePeriod timePeriod5 = new TimePeriod(startDate, endDate2);
-
-    @Before
-    public void init() {
-        MockitoAnnotations.initMocks(this);
-    }
 
     @Test
     public void getsNumberOfHolidaysInPeriodWithMock(){
@@ -125,6 +127,17 @@ public class TimePeriodTest {
 
         int output1 = timePeriod5.getNumberOfHolidaysInPeriod();
         Assert.assertEquals(3, output1);
+
+    }
+
+    @Test
+    public void getsEmptyListOfHolidays(){
+        List<ZonedDateTime> mockList = new ArrayList<>();
+
+        when(service.getPublicHolidays("2019")).thenReturn(mockList);
+
+        int output1 = timePeriod5.getNumberOfHolidaysInPeriod();
+        Assert.assertEquals(0, output1);
 
     }
 

@@ -1,6 +1,6 @@
-package com.Service;
+package com.service;
 
-import com.Utils.*;
+import com.utils.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

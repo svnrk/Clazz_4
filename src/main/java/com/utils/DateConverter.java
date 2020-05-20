@@ -1,4 +1,4 @@
-package com.Utils;
+package com.utils;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -15,8 +15,7 @@ public class DateConverter {
     public static ZonedDateTime dateStringToZDT(String dateString){
         try{
             LocalDate date = LocalDate.parse(dateString, dateFormat);
-            ZonedDateTime result = date.atStartOfDay(zone1);
-            return result;
+            return date.atStartOfDay(zone1);
         }
         catch (DateTimeParseException e) {
             System.out.println("Invalid date");
@@ -32,8 +31,7 @@ public class DateConverter {
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern(otherDateFormat);
         try {
             LocalDate date = LocalDate.parse(dateString, dateFormat);
-            ZonedDateTime result = date.atStartOfDay(zone1);
-            return result;
+            return date.atStartOfDay(zone1);
         } catch (DateTimeParseException e) {
             System.out.println("Invalid date");
             return null;

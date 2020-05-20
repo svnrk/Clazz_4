@@ -1,5 +1,7 @@
 package com.school;
 
+import com.hello.Greeter;
+
 public class Teacher extends PersonImpl {
     public Teacher(String firstName, String lastName) {
         super(firstName, lastName);
@@ -11,7 +13,9 @@ public class Teacher extends PersonImpl {
 
     @Override
     public void sayHello(){
-        System.out.println("Hello teacher, " + getFullName());
+        Greeter greeter = new Greeter();
+        System.out.println(greeter.sayHello(getFullName()));
+        System.out.println("Teacher");
     }
 
 }

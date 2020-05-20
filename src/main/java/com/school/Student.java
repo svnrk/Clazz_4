@@ -1,5 +1,7 @@
 package com.school;
 
+import com.hello.Greeter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +24,9 @@ public class Student extends PersonImpl {
 
     @Override
     public void sayHello() {
-        System.out.println("Hello student, " + getFullName());
+        Greeter greeter = new Greeter();
+        System.out.println(greeter.sayHello(getFullName()));
+        System.out.println("Student");
     }
 
     public void addCourse(Course course) {

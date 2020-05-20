@@ -1,7 +1,8 @@
 package com.school;
 
 
-import com.Utils.*;
+import com.hello.Greeter;
+import com.utils.*;
 import java.time.ZonedDateTime;
 
 public class PersonImpl implements Person {
@@ -42,6 +43,7 @@ public class PersonImpl implements Person {
     }
 
     public void sayHello() {
-        System.out.println("Hello " + getFullName());
+        Greeter greeter = new Greeter();
+        System.out.println(greeter.sayHello(getFullName()));
     }
 }
