@@ -1,0 +1,4 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1589988413118,5,HTTP Request,200,OK,visitors 1-1,text,true,,200,126,1,1,http://localhost:1330/hello?name=Tom,5,0,3
+1589988413452,3,HTTP Request,200,OK,visitors 1-2,text,true,,200,126,1,1,http://localhost:1330/hello?name=Tom,3,0,1
+1589988413788,3,HTTP Request,200,OK,visitors 1-3,text,true,,200,126,1,1,http://localhost:1330/hello?name=Tom,3,0,1
