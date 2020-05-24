@@ -12,13 +12,16 @@ public class JettyServer {
         try {
             server = new Server();
             ServerConnector connector = new ServerConnector(server);
-            connector.setPort(1330);
+            connector.setPort(1332);
             server.setConnectors(new Connector[]{connector});
 
             ServletHandler servletHandler = new ServletHandler();
             server.setHandler(servletHandler);
 
+
             servletHandler.addServletWithMapping(HelloServlet.class, "/hello");
+            servletHandler.addServletWithMapping(CoursesListServlet.class, "/courses");
+            servletHandler.addServletWithMapping(CourseNumberOfWorkdaysServlet.class, "/course_length");
             server.start();
         } catch (Exception ex) {
             System.out.println("AAAA");

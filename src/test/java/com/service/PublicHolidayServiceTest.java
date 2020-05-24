@@ -13,7 +13,7 @@ import java.util.List;
 public class PublicHolidayServiceTest {
 
     @Rule
-    public WireMockRule wireMockRule = new WireMockRule(80 );
+    public WireMockRule wireMockRule = new WireMockRule(80);
     PublicHolidayService service = new PublicHolidayService("http://localhost/");
 
     @Test

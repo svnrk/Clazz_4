@@ -55,7 +55,7 @@ public class TimePeriodTest {
     }
 
     @Test (expected = NullPointerException.class)
-    public void getsNullPointerExeption() {
+    public void getsNullPointerException() {
         long output1 = new TimePeriod(null, null).getPeriodLengthInDays();
 
     }

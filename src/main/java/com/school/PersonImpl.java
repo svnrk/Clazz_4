@@ -46,4 +46,9 @@ public class PersonImpl implements Person {
         Greeter greeter = new Greeter();
         System.out.println(greeter.sayHello(getFullName()));
     }
+
+    @Override
+    public String toString() {
+        return  fullName;
+    }
 }

@@ -18,6 +18,8 @@ public class Course {
     private Teacher teacher;
     private List<Student> students = new ArrayList<>();
 
+    private static List<Course> courses = new ArrayList<>();
+
     public Course(String name, Integer eap, String startDate, String endDate, Teacher teacher) {
         this.name = name;
         this.eap = eap;
@@ -25,8 +27,15 @@ public class Course {
         this.endDate = DateConverter.dateStringToZDT(endDate);
         this.timePeriod = new TimePeriod(this.startDate, this.endDate);
         this.teacher = teacher;
+        courses.add(this);
+    }
 
-
+    public Course(String name, Integer eap, TimePeriod timePeriod, Teacher teacher) {
+        this.name = name;
+        this.eap = eap;
+        this.timePeriod = timePeriod;
+        this.teacher = teacher;
+        courses.add(this);
     }
 
     public void addStudent(Student student) {
@@ -93,5 +102,20 @@ public class Course {
 
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "name='" + name + '\'' +
+                ", eap=" + eap +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", teacher=" + teacher +
+                '}' + '\n';
+    }
+
+    public static List<Course> getCourses(){
+        return courses;
     }
 }
